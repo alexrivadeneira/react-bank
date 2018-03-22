@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class Debit extends Component{
 	render(){
 		return(
-			<div>
+			<div key={this.props.id}>
 				<li>$<strong>{this.props.amount}</strong> {this.props.date}</li>
 			</div>
 		);

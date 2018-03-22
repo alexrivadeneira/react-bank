@@ -4,7 +4,7 @@ class Credit extends Component{
 	render(){
 		return(
 			<div>
-				<li>$<strong>{this.props.amount}</strong> {this.props.date}</li>
+				<li key={this.props.id}>$<strong>{this.props.amount}</strong> {this.props.date}</li>
 			</div>
 		);
 	}
