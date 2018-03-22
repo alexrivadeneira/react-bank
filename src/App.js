@@ -4,6 +4,7 @@ import Home from './components/Home';
 import UserProfile from './components/UserProfile';
 import LogIn from './components/Login';
 import CreditsList from './components/CreditsList';
+import DebitsList from './components/DebitsList';
 
 
 const credits = [
@@ -98,14 +99,14 @@ class App extends Component {
   	const HomeComponent = () => (<Home accountBalance={this.state.accountBalance}/>);
   	const UserProfileComponent = () => (<UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}/>);
   	const CreditsListComponent = () => (<CreditsList creditsList={credits} />);
-
+  	const DebitsListComponent = () => (<DebitsList debitsList={debits} />);
     return (
     	<Router>
     		<Switch>
 		      <Route exact path="/" render={HomeComponent} />
 		      <Route exact path="/userProfile" render={UserProfileComponent} />
   				<Route exact path="/login" render={LogInComponent}/>
-  				<Route exact path="/credits" render={CreditsListComponent} />
+  				<Route exact path="/debits" render={DebitsListComponent} />
 		    </Switch>
 	    </Router>
     );
